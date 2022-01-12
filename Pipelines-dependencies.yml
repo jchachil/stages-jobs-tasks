@@ -37,3 +37,8 @@ stages:
     steps:
     - script: echo DeployUS2
       displayName: DeployUS2
+      
+- stage: DeployEurope
+  dependsOn: # this stage runs after DeployUS1 and DeployUS2
+  - DeployUS1
+  - DeployUS2
