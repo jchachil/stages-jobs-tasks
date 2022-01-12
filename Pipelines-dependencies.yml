@@ -7,7 +7,7 @@ pool:
 stages:
 - stage: Test 
 - stage: DeployUS1
-  dependsOn: Test # this stage runs after Test
+  #dependsOn: Test # this stage runs after Test
   
 - stage: DeployUS2
   dependsOn: Test # this stage runs in parallel with DeployUS1, after Test
