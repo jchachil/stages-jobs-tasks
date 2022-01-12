@@ -28,3 +28,12 @@ stages:
     steps:
     - script: echo deploying backend app to DEV
       displayName: deploy backend app to DEV
+
+- stage: DeployUS2
+  dependsOn: Test # this stage runs in parallel with DeployUS1, after Test
+  jobs:
+  - job: DeployUS2
+    displayName: Deploy DeployUS2 
+    steps:
+    - script: echo DeployUS2
+      displayName: DeployUS2
