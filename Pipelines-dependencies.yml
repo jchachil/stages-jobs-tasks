@@ -6,6 +6,14 @@ pool:
 
 stages:
 - stage: Test 
+  jobs:
+  - job: BuildFrontendApp
+    displayName: Build Frontend App
+    steps:
+    - script: echo building frontend app
+      displayName: build frontend app
+    - script: echo running unit tests for frontend app
+      displayName: unit tests frontend
 - stage: DeployUS1
   #dependsOn: Test # this stage runs after Test
   
